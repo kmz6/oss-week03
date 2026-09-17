@@ -32,6 +32,7 @@
 // 커밋 메시지: p4: compare cities
 
 import { geocode, forecast } from "./p3_weather.js";
+import chalk from "chalk";
 
 const names = process.argv.slice(2);
 if (names.length === 0) {
@@ -66,7 +67,9 @@ const failed = results
   .filter(({ r }) => r.status === "rejected");
 
 passed.forEach((row, i) => {
-  console.log(`${i + 1}. ${row.city.padEnd(8)} ${row.max.toFixed(1)}`)
+  const s = row.max.toFixed(1);
+  const max = row.max >= 30 ? chalk.red(s) : row.max < 10 ? chalk.blue(s) : s;
+  console.log(`${i + 1}. ${chalk.bold(row.city.padEnd(8))} ${max}`)
 })
 
 for (const { r, name } of failed) {

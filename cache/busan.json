@@ -8,7 +8,7 @@
   "raw": {
     "latitude": 35.1,
     "longitude": 129,
-    "generationtime_ms": 0.17845630645751953,
+    "generationtime_ms": 0.2048015594482422,
     "utc_offset_seconds": 32400,
     "timezone": "Asia/Seoul",
     "timezone_abbreviation": "GMT+9",
@@ -20,9 +20,9 @@
       "weather_code": "wmo code"
     },
     "current": {
-      "time": "2026-09-17T16:45",
+      "time": "2026-09-17T17:00",
       "interval": 900,
-      "temperature_2m": 24,
+      "temperature_2m": 23.9,
       "weather_code": 1
     },
     "daily_units": {
